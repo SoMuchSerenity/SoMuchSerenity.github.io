@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://somuchserenity.github.io/</id>
     <title>Gridea</title>
-    <updated>2021-12-11T23:11:06.457Z</updated>
+    <updated>2021-12-12T17:05:23.863Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://somuchserenity.github.io/"/>
     <link rel="self" href="https://somuchserenity.github.io/atom.xml"/>
@@ -10,6 +10,93 @@
     <logo>https://somuchserenity.github.io/images/avatar.png</logo>
     <icon>https://somuchserenity.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[CS814:AI for Autonomous systems review]]></title>
+        <id>https://somuchserenity.github.io/post/cs814ai-for-autonomous-systems-review/</id>
+        <link href="https://somuchserenity.github.io/post/cs814ai-for-autonomous-systems-review/">
+        </link>
+        <updated>2021-12-12T05:50:34.000Z</updated>
+        <content type="html"><![CDATA[<ol>
+<li><strong>Concepts review:</strong></li>
+</ol>
+<p><strong><em>Agent</em>:</strong> Anything that can be viewed as perceiving its <strong>enviroment</strong> through <strong>sensors</strong> and acting upon that enviroment through <strong>actuators</strong></p>
+<p><em><strong>Percept</strong></em>: Agent's perceptual inputs at any given instant.</p>
+<p><em><strong>Percept sequence</strong></em>: The complete history if everything the agent has ever perceived.</p>
+<p><em><strong>Rational agent</strong></em>: One that does the right thing - Conceptually speaking, every entry in the table for the agent function is filled out correctly.</p>
+<p><em><strong>Omniscience</strong></em>: An omniscient agent knows the actual outcome of its actions and cant act accordingly.</p>
+<p><em><strong>Task enviroments</strong></em>: The &quot;problems&quot; to which rational agents are the solutions</p>
+<p><em><strong>PEAS</strong></em>: Performance, Enviroment, Actuators, Sensors.</p>
+<p>Examples of PEAS:<br>
+<img src="https://somuchserenity.github.io//post-images/1639317727153.png" alt="" loading="lazy"></p>
+<p>Properties(or dimensions) of task enviroments:</p>
+<ul>
+<li>Fully observable vs Partially observable</li>
+<li>Single agent vs Multiagent</li>
+<li>Deterministic vs Stochastic</li>
+<li>Episodic vs Sequential</li>
+<li>Static vs Dynamic          (If the enviroment does not change but the agent's performancescore does, then it is called semidynamic)</li>
+<li>Discrete vs Continuous</li>
+<li>Know vs Unknown<br>
+<img src="https://somuchserenity.github.io//post-images/1639318206937.png" alt="" loading="lazy"></li>
+</ul>
+<p>Simple reflex agent: Agents that select actions on the basis of the current percept, ignoring the rest of the percept history.</p>
+<figure data-type="image" tabindex="1"><img src="https://somuchserenity.github.io//post-images/1639318509403.png" alt="" loading="lazy"></figure>
+<p>Model based agent: Agents that use knowledge of &quot;how the world works&quot; - model.<br>
+<img src="https://somuchserenity.github.io//post-images/1639318540519.png" alt="" loading="lazy"></p>
+<p>Goal based agent: Acts to achieve their goals.</p>
+<p>Utility base agent: Tries to maximise their own expected &quot;happiness&quot;.</p>
+<p>Queue: Used to store the frontier so that the search algorithm can easily choose the next node to expand according to its preferred strategy. Queues are characterized by the order in which they store the inserted nodes. 3 common variants are the <strong>FIFO</strong> <strong>quene</strong>, <strong>LIFO</strong> <strong>queue</strong>(also known as a <strong>stack</strong>), and the <strong>priority</strong> <strong>queue</strong>(pops the element of the queue with the highest priority according to some ordering function)</p>
+<p>Measure of problem-solving performance:</p>
+<ul>
+<li><strong>Completeness</strong>: Is the algorithm guranteed to find a solution when there is one?</li>
+<li><strong>Optimality</strong>: Does the strategy find the optimal solution?</li>
+<li><strong>Time complexity</strong>: How long does it take to find a solution?</li>
+<li><strong>Space complexity</strong>: How much memory is needed to perform the search?</li>
+</ul>
+<ol start="2">
+<li><strong>Uninformed search strategies</strong></li>
+</ol>
+<ul>
+<li><em><strong>Breadth first search(BFS):</strong></em> Using FIFO queue for the frontier, shallowest unexpanded node is chosen for expansion.<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi><mi>p</mi><mi>a</mi><mi>c</mi><mi>e</mi><mspace width="0.3em"/><mi>c</mi><mi>o</mi><mi>m</mi><mi>p</mi><mi>l</mi><mi>e</mi><mi>x</mi><mi>i</mi><mi>t</mi><mi>y</mi><mo>:</mo><mi>O</mi><mo>(</mo><msup><mi>b</mi><mi>d</mi></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">
+Space\hspace{0.3em}complexity: O(b^d)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault">p</span><span class="mord mathdefault">a</span><span class="mord mathdefault">c</span><span class="mord mathdefault">e</span><span class="mspace" style="margin-right:0.3em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault">m</span><span class="mord mathdefault">p</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault">x</span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.099108em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">b</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">d</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></li>
+<li><em><strong>Uniform cost search</strong></em>: Expands the node with the lowest path cost<br>
+<img src="https://somuchserenity.github.io//post-images/1639325631976.png" alt="" loading="lazy"></li>
+<li>***Depth first search(DFS)***: Using LIFO queue.<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>T</mi><mi>i</mi><mi>m</mi><mi>e</mi><mspace width="0.3em"/><mi>c</mi><mi>o</mi><mi>m</mi><mi>p</mi><mi>l</mi><mi>e</mi><mi>x</mi><mi>i</mi><mi>t</mi><mi>y</mi><mo>:</mo><mi>O</mi><mo>(</mo><msup><mi>b</mi><mi>m</mi></msup><mo>)</mo><mspace linebreak="newline"></mspace><mi>S</mi><mi>p</mi><mi>a</mi><mi>c</mi><mi>e</mi><mspace width="0.3em"/><mi>c</mi><mi>o</mi><mi>m</mi><mi>p</mi><mi>l</mi><mi>e</mi><mi>x</mi><mi>i</mi><mi>t</mi><mi>y</mi><mo>:</mo><mi>O</mi><mo>(</mo><mi>b</mi><mi>m</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">
+Time\hspace{0.3em}complexity: O(b^m)\\
+Space\hspace{0.3em}complexity:O(bm)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault">i</span><span class="mord mathdefault">m</span><span class="mord mathdefault">e</span><span class="mspace" style="margin-right:0.3em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault">m</span><span class="mord mathdefault">p</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault">x</span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">b</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">m</span></span></span></span></span></span></span></span><span class="mclose">)</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault">p</span><span class="mord mathdefault">a</span><span class="mord mathdefault">c</span><span class="mord mathdefault">e</span><span class="mspace" style="margin-right:0.3em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault">m</span><span class="mord mathdefault">p</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault">x</span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">b</span><span class="mord mathdefault">m</span><span class="mclose">)</span></span></span></span><br>
+A variant called <em><strong>backtracking search</strong></em> uses less memory</li>
+</ul>
+<ol start="3">
+<li><strong>Informed search strategies</strong><br>
+<em><strong>Evaluation function</strong></em> f(x)<br>
+<em><strong>Heuristic function</strong></em> h(x)</li>
+</ol>
+<ul>
+<li>
+<p><em><strong>Greedy best-first search</strong></em>: Expands the node that is closest to the goal, on the grounds that this is likely to lead to a solution quickly. It evaluates nodes by using the heuristic function: that is f(x) = h(x). The worst-case time and space complexity for the tree version is <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mi>b</mi><mi>m</mi></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">
+O(b^m)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">b</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">m</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></p>
+</li>
+<li>
+<p><strong><em>A</em> search</strong>*: Minimising the total estimated solution cost. It evaluates nodes by combining g(n), the cost to reach the nodem and h(n), the cost to get from the node to the goal: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>n</mi><mo>)</mo><mo>=</mo><mi>g</mi><mo>(</mo><mi>n</mi><mo>)</mo><mo>+</mo><mi>h</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">
+f(n) = g(n) + h(n)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">h</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></p>
+</li>
+</ul>
+<p>Conditions for <em><strong>optimality</strong></em>: <em><strong>Admissiblity</strong></em> and <em><strong>consistency</strong></em></p>
+<p><em><strong>Admissible heuristic</strong></em> h(n): One that never overestimates the cost to reach the goal.</p>
+<p><em><strong>consistent heuristic</strong></em>: For every node n and every successor n' of n generated by any action a, the estimated cost of reaching the goal  from n is no greater than the step cost of getting to n' plus the estimated cost of reaching the goal from n':<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>h</mi><mo>(</mo><mi>n</mi><mo>)</mo><mo>&lt;</mo><mo>=</mo><mi>c</mi><mo>(</mo><mi>n</mi><mo separator="true">,</mo><mi>a</mi><mo separator="true">,</mo><msup><mi>n</mi><mo mathvariant="normal">′</mo></msup><mo>)</mo><mo>+</mo><mi>h</mi><mo>(</mo><msup><mi>n</mi><mo mathvariant="normal">′</mo></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">
+h(n) &lt;= c(n,a,n&#x27;) + h(n&#x27;)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">h</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span></span><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.001892em;vertical-align:-0.25em;"></span><span class="mord mathdefault">c</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.001892em;vertical-align:-0.25em;"></span><span class="mord mathdefault">h</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span><br>
+Every consistent heuristic is also admissible. Consistency is therefore a stricter requirement than admissibility.</p>
+<p>One way to characterise the quality of a heuristic is the <em><strong>effective branching facotr</strong></em> b*.</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[First Article....     Derivative on Sigmoid function]]></title>
         <id>https://somuchserenity.github.io/post/first-article-derivative-on-sigmoid-function/</id>
