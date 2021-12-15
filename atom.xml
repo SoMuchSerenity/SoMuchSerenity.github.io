@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://somuchserenity.github.io/</id>
     <title>Gridea</title>
-    <updated>2021-12-15T11:22:08.523Z</updated>
+    <updated>2021-12-15T23:43:27.674Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://somuchserenity.github.io/"/>
     <link rel="self" href="https://somuchserenity.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>The purpose of computation is insights, not numbers</subtitle>
     <logo>https://somuchserenity.github.io/images/avatar.png</logo>
     <icon>https://somuchserenity.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
@@ -15,7 +15,7 @@
         <id>https://somuchserenity.github.io/post/likelihood-function-and-maximum-likelihood-estimationmle/</id>
         <link href="https://somuchserenity.github.io/post/likelihood-function-and-maximum-likelihood-estimationmle/">
         </link>
-        <updated>2021-12-15T02:24:02.000Z</updated>
+        <updated>2021-12-14T18:24:02.000Z</updated>
         <content type="html"><![CDATA[<p>Example: Given 3 data points 9,9.5 and 11, which are very likely coming from a Normal distribution, MLE can be used then to give the estimation of the most likely parameters of this Normal distribution.</p>
 <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo>(</mo><mi>x</mi><mo separator="true">;</mo><mi>μ</mi><mo separator="true">,</mo><mi>σ</mi><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mi>σ</mi><msqrt><mrow><mn>2</mn><mi>π</mi></mrow></msqrt></mrow></mfrac><mi>e</mi><mi>x</mi><mi>p</mi><mo>(</mo><mo>−</mo><mfrac><mrow><mo>(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo>)</mo><mn>2</mn></msup></mrow><mrow><mn>2</mn><msup><mi>σ</mi><mn>2</mn></msup></mrow></mfrac><mo>)</mo></mrow><annotation encoding="application/x-tex">P(x;\mu,\sigma) = \frac{1}{\sigma\sqrt{2\pi}}exp(-\frac{(x-\mu)^2}{2\sigma^2})
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">μ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">σ</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.6469199999999997em;vertical-align:-0.5379999999999999em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.5510085em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">σ</span><span class="mord sqrt mtight"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.912845em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mtight" style="padding-left:0.833em;"><span class="mord mtight">2</span><span class="mord mathdefault mtight" style="margin-right:0.03588em;">π</span></span></span><span style="top:-2.872845em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail mtight" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,
@@ -66,7 +66,7 @@ By taking the differentiation of this joint probability function and make it equ
         <id>https://somuchserenity.github.io/post/cs814ai-for-autonomous-systems-review/</id>
         <link href="https://somuchserenity.github.io/post/cs814ai-for-autonomous-systems-review/">
         </link>
-        <updated>2021-12-12T05:50:34.000Z</updated>
+        <updated>2021-12-11T21:50:34.000Z</updated>
         <content type="html"><![CDATA[<ol>
 <li><strong>Concepts review:</strong></li>
 </ol>
@@ -153,7 +153,7 @@ Every consistent heuristic is also admissible. Consistency is therefore a strict
         <id>https://somuchserenity.github.io/post/first-article-derivative-on-sigmoid-function/</id>
         <link href="https://somuchserenity.github.io/post/first-article-derivative-on-sigmoid-function/">
         </link>
-        <updated>2021-12-10T21:00:20.000Z</updated>
+        <updated>2021-12-10T13:00:20.000Z</updated>
         <content type="html"><![CDATA[<p>Sigmoid function is defined as follows:</p>
 <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>x</mi></mrow></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">
 f(x) = \frac{1}{1+e^{-x}}
